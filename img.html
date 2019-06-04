@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Visualiseur</title>
+
+<style>
+.resizable {
+    resize: both;   /* Options: horizontal, vertical, both */
+    overflow: auto; /* fix for Safari */
+}
+.fullWidth{
+width:100%;
+}
+
+.content{
+width:100%;
+}
+
+div{
+display:grid;
+}
+
+img{
+margin:auto;
+margin-bottom:100%;
+  box-shadow:black 3px 3px 5px 2px;
+}
+
+.texte{
+   padding:10px;
+   position: fixed;
+   min-height:2em;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: lightgray;
+   font-size: 30pt;
+}
+
+body{
+    font-family: 'Noto Serif', serif;
+    background-color: rgba(0, 102, 102,.5);
+}
+
+</style>
+<body>
+
+<div id="imgDiv" class="image resizable"></div>
+<div contenteditable class="texte">§</div>
+
+
+
+
+<script>
+function getJsonFromUrl(url) {
+  if(!url) url = location.search;
+  var query = url.substr(1);
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+function chgMargin(e){
+	if ( e.altKey == true ) {
+	e.preventDefault();
+//	curWidth = document.getElementById("imgDiv").width
+    document.getElementById("myImg").width = document.getElementById("myImg").width - e.deltaY*10;
+//	document.getElementById("imgDiv").width = document.getElementById("imgDiv").width-e.deltaY*200;
+	}
+}
+
+var image = getJsonFromUrl().img;
+var i = document.createElement("img");
+i.src = image;
+i.setAttribute("id", "myImg");
+i.setAttribute("width", "80%");
+document.body.appendChild(i);
+document.getElementById("imgDiv").appendChild(i);
+
+document.addEventListener("wheel",chgMargin, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+/*css var not working with wkhtmltopdf
+/*:root {
+  --bg-color: #fafafa;
+  --text-color: #444;
+  --red-color: rgba(239, 10, 0, 0.7);
+  --green-color: #88a34f;
+}
+*/
+/*body*/
+ 
+  
+body {
+  background-color: #fafafa;
+  text-rendering: optimizeLegibility;
+  color:#444;
+  font-family: "noto serif";
+  font-size: 28px;
+  width: 100%;
+  margin: auto;
+  line-height: 1.5;
+/*to avoid text selection when dragging*/
+  -moz-user-select: none; /* Firefox */
+  user-select: none;
+  }
+
+.editV:before{
+  content:"correction";
+  font-variant:small-caps;
+  text-decoration:underline;
+}
+  
+.container{
+  width:80%;
+  margin:auto;
+}
+
+h1,h2,h3{
+font-family:open sans;
+font-weight:300;
+color:#c55;
+}
+
+h1, h2 { font-variant: small-caps; }
+
+/*h1, chapter title*/
+h1{
+  text-align:center;
+  border-bottom: solid 1px #666;
+  border-top: solid 1px #666;
+  padding:15px;
+  font-size:1.953em;
+  line-height:1;
+}
+
+h2, h3{
+  font-weight:normal;
+}
+h2{
+  font-size:1.563em;
+}
+
+h3{
+  margin-left:1em;
+  font-size:1.25em
+}
+
+/*table style*/
+th, td { padding: 15px; }
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+table {
+  width:100%;
+  border-collapse : collapse;
+  border-spacing: 0;
+}
+thead {
+  font-weight:bold;
+  color:#FFF;
+  background-color:#666;
+}
+
+/*figcaption*/
+	figcaption {
+	font-size:75%;
+	font-style:italic;
+	}
+
+/*frame*/
+.encR{/*red frame*/
+  border:15px solid rgba(239, 10, 0, 0.7);
+  padding:10px;
+  box-shadow: black 3px 3px 5px 2px;
+}
+.encR p{
+  margin:0;
+}
+
+svg{
+  vertical-align:middle;
+  height:auto; /*preserve ration*/
+  background-color:#fff;
+}
+
+svg.tt{
+  background-color:unset;
+  color:white;
+  transition:all .2s;
+}
+
+svg.tt:hover{
+  background-color:unset;
+  color:#428BCA;
+}
+
+object{
+  background-color:#fff;
+}
+
+footer{
+  text-align:center;
+}
+/*activité*/
+.act{
+  white-space:nowrap;
+  font-family:sans;
+  text-indent:3em;
+  font-weight:bold;
+  background-color:rgba(0, 0, 0,0.6);
+  position:relative;
+  left:3em;
+  letter-spacing:-.09em;
+  text-shadow: 1px 1px 2px black;
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.ttLink{
+  width:1.2em;
+  display:block;
+  position:absolute;
+  left:10px;
+  filter: drop-shadow(1px 1px 2px #000);
+  transition:all .2s;
+  padding:0.5em;
+}
+
+
+/*style for dashed frame to indicate hidden element*/
+span.cache{
+  border:dashed 1px gray;
+}
+
+/*style for hidden elements*/
+.h{
+/*  padding-left:10px;
+  padding-right:10px; je vire car c'est moche (voir déf de masse)*/
+  transition: opacity .4s;
+  cursor:pointer;
+}
+
+
+img{
+  width:100%;
+  box-shadow:black 3px 3px 5px 2px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:white;
+}
+
+.notes{
+  display:none;
+  background-color: #88a34f;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8);
+  padding:10px;
+}
+
+
+.ttNotes{
+position:absolute;
+right:10px;
+background-color:#88a34f;
+border-radius:6px;
+padding-left:6px;
+padding-right:6px;
+/*font-size:70%;*/
+opacity:0.3;
+color:#fafafa;
+transition:all .5s;
+}
+.ttNotes:hover{
+opacity:.8;
+color:#444;
+}
+
+
+
+/*2 images side by side*/
+.img2{
+display:inline-block;
+width:49%;
+}
+
+figure{
+  margin:10px;
+}
+
+figcaption{
+  padding-top:5px;
+}
+/*tableTrans: transparent table*/
+div.tableTrans th, div.tableTrans td { padding: 10px; }
+
+div.tableTrans table {
+  width:100%;
+  border-collapse : collapse;
+  border-spacing: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+div.tableTrans thead {
+  font-weight:bold;
+}
+
+/*underline*/
+.u{
+  border-bottom:solid 1px;
+  line-height:.9;
+  display:inline-flex;
+}
+
+p{
+  padding:0px;
+}
+
+/*matériel : list needed materials*/
+.matériel{
+  display:none;
+  background-color: rgba(135, 131, 218, 0.7);
+  border-top: dashed 5px black;
+  border-bottom: dashed 5px black;
+  padding-left:1em;
+  padding-right:1em;
+}
+
+/*editC: editable div, in red, black or green*/
+
+.editV{
+  color: #88a34f;
+  border-left:5px solid #88a34f;
+  border-radius:5px;
+  box-shadow:2px 2px 5px gray;
+}
+
+/*notes:private notes*/
+.notes>p::before{
+content:"✱ ";
+}
+
+.notes>p{
+text-indent:1em;
+margin:0;
+}
+
+/*exercices: exercise to do*/
+.exercices{
+display:none;
+background-color: rgba(239, 10, 0, 0.7);
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8);
+padding:10px;
+
+
+
+}
+
+.exercices>p{
+text-indent:1em;
+margin:0;
+}
+
+.ttExercices[title]:hover:after {
+  content: attr(title);
+  }
+
+.ttExercices{
+position:absolute;
+left:10px;
+background-color:#88a34f;
+border-radius:6px;
+padding-left:6px;
+padding-right:6px;
+opacity:0.3;
+color:#fafafa;
+/*font-size:70%;*/
+transition:all .8s;
+}
+.ttExercices:hover{
+/*color:#444;*/
+opacity:.75;
+/*font-size:90%;
+border: solid 5px gray;*/
+transition:all .8s;
+
+}
+
+.def{
+margin-bottom:-1em;
+text-decoration:underline;
+text-decoration-color:rgba(239, 10, 0, 0.7);
+}
+
+.def>p{
+margin-bottom:0;
+}
+
+/*r:text in red*/
+.r{
+color:rgba(239, 10, 0, 0.7);
+}
+
+.v{
+    color:#88a34f;
+}
+
+/*i:text in italic*/
+.i{
+font-style:italic;
+font-size:80%;
+}
+
+/*big:bigger text*/
+.big{
+font-size:300%;
+}
+
+/*wXX: use XX% of the width*/
+.w20{
+width:20%;
+}
+
+.w40{
+width:40%;
+}
+
+.w60{
+width:60%;
+}
+
+.w80{
+width:80%;
+}
+
+/*bs:apply a standard box-shadow effect*/
+.bs{
+box-shadow:black 3px 3px 5px 2px;
+}
+/*TODO:A TESTER*/
+.svgb{ /*svg block, not inline*/
+display:block;
+margin:auto;
+}
+
+.details{
+color:#fafafa;
+background-color: rgba(100,100,100,1);
+border-top: solid 15px rgba(100,100,100,1);
+border-bottom: solid 15px rgba(100,100,100,1);
+border-left: solid 50px rgba(100,100,100,1);
+border-right: solid 50px rgba(100,100,100,1);
+}
+
+.details .underline{
+text-shadow:none;
+box-shadow:inset 0 -0.025em #c55;
+}
+
+/*c:centered text*/
+.c{
+text-align:center;
+}
+/*b : bold text*/
+.b{
+font-weight:bold;
+}
+
+ul{
+padding-left:10%;
+}
+
+/**TEXT* in md : red highlighting*/
+strong{
+background-color: rgba(191, 53, 47,.5);
+box-shadow: 0 0 0 2px rgba(191, 53, 47,.5);
+border-radius: 5px;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+em{
+font-weight:bold;
+font-style:normal;
+}
+
+pre{
+background-color:lightgray;
+box-shadow:0px 0px 3px 3px black;
+padding:10px;
+white-space : pre-wrap;
+font-size:80%;
+}
+
+
+.underline{
+/*underline with shadow box method*/
+  background-size: 1px 1em;
+  box-shadow:
+    inset 0 -0.1em #fafafa,
+    inset 0 -0.125em #c55;
+  display: inline;
+  text-shadow: .03em 0 #fafafa,-.03em 0 #fafafa,0 .03em #fafafa,0 -.03em #fafafa,.06em 0 #fafafa,-.06em 0 #fafafa,.09em 0 #fafafa,-.09em 0 #fafafa
+}
+/*increase video subs font size*/
+::cue {
+  font-size: 1.1em;
+}
+
+.H3{
+padding-left:20px;
+font-size:75%;
+}
+
+video{
+box-shadow: 0px 0px 3px 1px gray;
+}
+
+.mémo table{
+/*font-size:65%;*/
+/*line-height:1;*/
+}
+.mémo td{
+padding:8px;
+}
+
+.mémo td:first-of-type{
+width:35%;
+}
+
+.math.display{
+text-align:center;
+display:block;
+}
