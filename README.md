@@ -44,19 +44,20 @@ Il est possible d'ajouter du [[\latex]]
 
 ### Les classes particulières
 
- Class      effet
--------    --------------------------------------------------------------------------------------------
- h           masque les éléments. Affiche au clic
- visu        s'applique au image. affiche une icone pour corriger l'activité.
- r           met le texte en rouge
- encR        encadre en rouge
- details     éléments sur fond gris. Ce qui ne sera pas noté dans le cahier
- notes       notes pour l'enseignant. Visible dans l'infobulle
- exercices   exercices à donner. S'affiche au survol
- matériel    ne s'affiche que dans le pdf du prof
- u           souligne le texte
- i           texte en italique
- w80         applique une largeur de 80% (existent aussi w60,w40,w20)
- editV       emplacement éditable pour la correction
- act         référence d'une activité du livre
- vidéo       intégre une vidéo dont le chemin et le contenu html de l'élément ayant la classe vidéo
+
+| Class    |  effet                                                                                     |
+|----------|--------------------------------------------------------------------------------------------|
+|h         |  masque les éléments. Affiche au clic                                                      |
+|visu      |  s'applique au image. affiche une icone pour corriger l'activité.                          |
+|r         |  met le texte en rouge                                                                     |
+|encR      |  encadre en rouge                                                                          |
+|details   |  éléments sur fond gris. Ce qui ne sera pas noté dans le cahier                            |
+|notes     |  notes pour l'enseignant. Visible dans l'infobulle                                         |
+|exercices |  exercices à donner. S'affiche au survol                                                   |
+|matériel  |  ne s'affiche que dans le pdf du prof                                                      |
+|u         |  souligne le texte                                                                         |
+|i         |  texte en italique                                                                         |
+|w80       |  applique une largeur de 80% (existent aussi w60,w40,w20)                                  |
+|editV     |  emplacement éditable pour la correction                                                   |
+|act       |  référence d'une activité du livre                                                         |
+|vidéo     |  intégre une vidéo dont le chemin et le contenu html de l'élément ayant la classe vidéo    |
