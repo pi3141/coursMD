@@ -14,14 +14,15 @@ Il s'agit simplement d'un template pour pandoc contenant du HTML5/CSS/JS.
 * facilement personnalisable en éditant le CSS
 * il est possible de produire un pdf (avec princexml)
 
-## Utilisation
+## Installation
 
-il faut respecter l'arborescence suivante (ou bien modifier le template pour qu'il trouve les fichiers) :
+Respecter l'arborescence suivante (ou bien modifier le template pour qu'il trouve les fichiers) :
 
     ├── folder
     │   ├── folder
+    │   │   ├── compiledCourse.html
     │   │   ├── src
-    │   |       ├── source.md
+    │   |        ├── source.md
     ├── .resources
     │   ├── jquery.min.js
     │   ├── img.html
@@ -31,15 +32,10 @@ il faut respecter l'arborescence suivante (ou bien modifier le template pour qu'
     │   ├── printPrince.css
     │   ├── printProfPrince.css
 
-Les commandes à utiliser sont les suivantes : 
+### Pour windows
 
-    path\to\pandoc.exe %1  --template "path\to\.resources\myTemplate.html" --resource-path \path\to\.resources\;. --mathml -o %sortie%
-    "path\to\prince" %sortie% --no-author-style -s "path\to\.resources\printPrince.css" --page-margin=10mm  --media=screen
-    "path\to\prince" %sortie% --no-author-style -s "path\to\.resources\printPrinceProf.css" --page-margin=10mm  --media=screen -o %~n1.prof.pdf
-
-Il est possible de simplement glisser le fichier markdown sur compileWin.bat pour avoir le fichier html et les pdf.
-Attention à bien modifier les dossiers dans le fichier batch.
-
+Dans le fichie compileWin.bat éditer les chemins de pandoc et prince, et le chemin du dossier .resources.
+Faire glisser le fichier markdown source sur compileWin.bat pour générer le fichier html et les pdf.
 
 ## Documentation
 
