@@ -18,18 +18,18 @@ Il s'agit simplement d'un template pour pandoc contenant du HTML5/CSS/JS.
 
 il faut respecter l'arborescence suivante (ou bien modifier le template pour qu'il trouve les fichiers) :
 
-    folder/
-    +-- folder/
-    ¦   +-- folder
-    ¦          +--src
-    +-- .resources/
-    ¦   +-- jquery.min.js
-    ¦   +-- img.html
-    ¦   +-- myScripts.js
-    ¦   +-- myStyles.js
-    ¦   +-- myTemplate.html
-    ¦   +-- printPrince.css
-    ¦   +-- printProfPrince.css
+    ├── folder
+    │   ├── folder
+    │   │   ├── src
+    │   |       ├── source.md
+    ├── .resources
+    │   ├── jquery.min.js
+    │   ├── img.html
+    │   ├── myScripts.js
+    │   ├── myStyles.js
+    │   ├── myTemplate.html
+    │   ├── printPrince.css
+    │   ├── printProfPrince.css
 
 Les commandes à utiliser sont les suivantes : 
 
