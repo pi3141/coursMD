@@ -33,7 +33,7 @@ Respecter l'arborescence suivante (ou bien modifier le template pour qu'il trouv
     │   ├── printProfPrince.css
 
 ### Pour windows
-
+TODO:intégrer prince et pandoc dans le dépot
 Dans le fichie compileWin.bat éditer les chemins de pandoc et prince, et le chemin du dossier .resources.
 Faire glisser le fichier markdown source sur compileWin.bat pour générer le fichier html et les pdf.
 
@@ -45,7 +45,7 @@ Il est possible d'ajouter du [[\latex]]
 ### Les classes particulières
 
 
-| Class    |  effet                                                                                     |
+| Class    |  Utilisation                                                                                     |
 |----------|--------------------------------------------------------------------------------------------|
 |h         |  masque les éléments. Affiche au clic                                                      |
 |visu      |  s'applique au image. affiche une icone pour corriger l'activité.                          |
