@@ -1,66 +1,66 @@
 # coursMD
 
-Chaîne éditoriale pour produire des cours pour élèves, un support de projection et un cours pour l'enseignant.
-Démo ici : 
+ChaÃ®ne Ã©ditoriale pour produire des cours pour Ã©lÃ¨ves, un support de projection et un cours pour l'enseignant.
+DÃ©mo ici : 
 
-## Fonctionnalités
+## FonctionnalitÃ©s
 
 Il s'agit simplement d'un template pour pandoc contenant du HTML5/CSS/JS.
 
 * fichier source en markdown (pandoc markdown)
-* possibilité de faire apparaître des éléments au clic, ou à la télécommande
-* possibilité de faire les corrections dans le fichier
-* mise en forme adaptée au cours
-* facilement personnalisable en éditant le CSS
+* possibilitÃ© de faire apparaÃ®tre des Ã©lÃ©ments au clic, ou Ã  la tÃ©lÃ©commande
+* possibilitÃ© de faire les corrections dans le fichier
+* mise en forme adaptÃ©e au cours
+* facilement personnalisable en Ã©ditant le CSS
 * il est possible de produire un pdf (avec princexml)
 
 ## Utilisation
 
 il faut respecter l'arborescence suivante (ou bien modifier le template pour qu'il trouve les fichiers) :
 
-folder/
-+-- folder/
-¦   +-- folder
-¦          +--src
-+-- .resources/
-¦   +-- jquery.min.js
-¦   +-- img.html
-¦   +-- myScripts.js
-¦   +-- myStyles.js
-¦   +-- myTemplate.html
-¦   +-- printPrince.css
-¦   +-- printProfPrince.css
+    folder/
+    +-- folder/
+    Â¦   +-- folder
+    Â¦          +--src
+    +-- .resources/
+    Â¦   +-- jquery.min.js
+    Â¦   +-- img.html
+    Â¦   +-- myScripts.js
+    Â¦   +-- myStyles.js
+    Â¦   +-- myTemplate.html
+    Â¦   +-- printPrince.css
+    Â¦   +-- printProfPrince.css
 
-Les commandes à utiliser sont les suivantes : 
+Les commandes Ã  utiliser sont les suivantes : 
 
     path\to\pandoc.exe %1  --template "path\to\.resources\myTemplate.html" --resource-path \path\to\.resources\;. --mathml -o %sortie%
     "path\to\prince" %sortie% --no-author-style -s "path\to\.resources\printPrince.css" --page-margin=10mm  --media=screen
     "path\to\prince" %sortie% --no-author-style -s "path\to\.resources\printPrinceProf.css" --page-margin=10mm  --media=screen -o %~n1.prof.pdf
 
 Il est possible de simplement glisser le fichier markdown sur compileWin.bat pour avoir le fichier html et les pdf.
-Attention à bien modifier les dossiers dans le fichier batch.
+Attention Ã  bien modifier les dossiers dans le fichier batch.
 
 
 ## Documentation
 
-La syntaxe markdown de pandoc est utilisée [voir ici pour plus d'info](https://pandoc.org/MANUAL.html#pandocs-markdown)
+La syntaxe markdown de pandoc est utilisÃ©e [voir ici pour plus d'info](https://pandoc.org/MANUAL.html#pandocs-markdown)
 Il est possible d'ajouter du [[\latex]]
 
-### Les classes particulières
+### Les classes particuliÃ¨res
 
  Class      effet
 -------    --------------------------------------------------------------------------------------------
- h           masque les éléments. Affiche au clic
- visu        s'applique au image. affiche une icone pour corriger l'activité.
+ h           masque les Ã©lÃ©ments. Affiche au clic
+ visu        s'applique au image. affiche une icone pour corriger l'activitÃ©.
  r           met le texte en rouge
  encR        encadre en rouge
- details     éléments sur fond gris. Ce qui ne sera pas noté dans le cahier
+ details     Ã©lÃ©ments sur fond gris. Ce qui ne sera pas notÃ© dans le cahier
  notes       notes pour l'enseignant. Visible dans l'infobulle
- exercices   exercices à donner. S'affiche au survol
- matériel    ne s'affiche que dans le pdf du prof
+ exercices   exercices Ã  donner. S'affiche au survol
+ matÃ©riel    ne s'affiche que dans le pdf du prof
  u           souligne le texte
  i           texte en italique
  w80         applique une largeur de 80% (existent aussi w60,w40,w20)
- editV       emplacement éditable pour la correction
- act         référence d'une activité du livre
- vidéo       intégre une vidéo dont le chemin et le contenu html de l'élément ayant la classe vidéo
+ editV       emplacement Ã©ditable pour la correction
+ act         rÃ©fÃ©rence d'une activitÃ© du livre
+ vidÃ©o       intÃ©gre une vidÃ©o dont le chemin et le contenu html de l'Ã©lÃ©ment ayant la classe vidÃ©o
