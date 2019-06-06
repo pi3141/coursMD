@@ -7,12 +7,12 @@ Démo ici :
 
 Il s'agit simplement d'un template pour pandoc contenant du HTML5/CSS/JS.
 
-* fichier source en markdown (pandoc markdown)
+* écriture de cours en markdown ([pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown))
 * possibilité de faire apparaître des éléments au clic, ou à la télécommande
-* possibilité de faire les corrections dans le fichier
+* possibilité de rédiger les corrections sans quitter le navigateur
 * mise en forme adaptée au cours
 * facilement personnalisable en éditant le CSS
-* il est possible de produire un pdf (avec princexml)
+* possibilité de produire un pdf (avec princexml)
 
 ## Installation
 
