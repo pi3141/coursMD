@@ -1,7 +1,7 @@
 # coursMD
 
 Chaîne éditoriale pour produire des cours pour élèves, un support de projection et un cours pour l'enseignant.
-Démo [ici](http://pgazaniol.free.fr/cours/2018/5/5_09%20intensit%C3%A9%20du%20courant/5_09_a_intensit%C3%A9_du_courant.html) et [source](http://pgazaniol.free.fr/cours/2018/5/5_09%20intensit%C3%A9%20du%20courant/src/5_09_a_intensit%C3%A9_du_courant.md) : 
+[Démo](http://pgazaniol.free.fr/COURS/2018/5/5_09%20intensit%C3%A9%20du%20courant/5_09_a_intensit%C3%A9_du_courant.html) et [source](http://pgazaniol.free.fr/cours/2018/5/5_09%20intensit%C3%A9%20du%20courant/src/5_09_a_intensit%C3%A9_du_courant.md) : 
 
 ## Fonctionnalités
 
